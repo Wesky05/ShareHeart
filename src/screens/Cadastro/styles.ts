@@ -80,20 +80,18 @@ export const styles = StyleSheet.create({
 
     inputsContainer: {
         width: "100%",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "flex-start",
         gap: 16,
-        marginTop: 8,
+        marginTop: 24,
     },
     formsTopic: {
         fontSize: 16,
         fontWeight: "500",
         color: "#EB6AAF",
-        position: "relative",
-        right: 80,
     },
     formInput: {
-        width: "80%",
+        width: "100%",
         height: 50,
         backgroundColor: "#EEE",
         borderRadius: 25,
@@ -110,7 +108,7 @@ export const styles = StyleSheet.create({
     },
     formInput50Container: {
         width: "80%",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "space-between",
         flexDirection: "row",
     },

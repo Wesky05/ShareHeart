@@ -35,12 +35,19 @@ export const styles = StyleSheet.create({
         shadowRadius: 4,
         alignItems: "center",
         justifyContent: "flex-start",
-        gap: 16,
+        gap: 24,
     },
     formTitle: {
         fontSize: 32,
         fontWeight: "600",
         color: "#6A77EB",
+    },
+
+    inputContainer: {
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        gap: 16,
     },
     formInput: {
         width: "80%",
@@ -49,5 +56,52 @@ export const styles = StyleSheet.create({
         borderRadius: 25,
         paddingLeft: 20,
         color: "#1A1A1A",
+    },
+
+    link: {
+        color: "#EB6AAF",
+        position: "relative",
+        left: 100,    
+    },
+
+    button: {
+        width: "50%",
+        height: 50,
+        backgroundColor: "#6A77EB",
+        borderRadius: 15,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    buttonText: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: "#FAFAFA"
+    },
+
+    text: {
+        color: "#1A1A1A",
+    },
+
+    socialsContainer: {
+        flexDirection: "row",
+        width: "50%",
+        justifyContent: "space-between",
+    },
+    socialBg: {
+        width: 30,
+        height: 30,
+        backgroundColor: "#EB6AAF",
+        borderRadius: 15,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    singInContainer: {
+        flexDirection: "row",
+        gap: 2,
+    },
+    singIn: {
+        color: "#6A77EB",
+        fontWeight: "600",
     },
 });

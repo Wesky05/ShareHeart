@@ -47,5 +47,34 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#EB6AAF",
     },
-    
+
+    chooseAccount: {
+        width: "50%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginTop: 16
+    },
+    accountType: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: "#EB6AAF",
+        opacity: 0.5,
+    },
+    activeAccountType: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: "#6A77EB",
+        opacity: 1,
+    },
+
+    accountTypeLink: {
+        padding: 10
+    },
+    activeAccountTypeLink: {
+        padding: 10,
+        borderBottomWidth: 2,
+        borderBottomColor: "#6A77EB",
+        borderRadius: 1,
+    }
 });

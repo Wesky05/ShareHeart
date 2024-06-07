@@ -6,6 +6,7 @@ import { AppleLogo, GoogleLogo, MetaLogo, MicrosoftOutlookLogo } from "phosphor-
 
 
 export function Login({navigation}) {
+
     return(
         <View style={styles.container}>
             <View style={styles.logoContainer}>

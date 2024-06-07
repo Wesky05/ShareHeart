@@ -76,5 +76,42 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 2,
         borderBottomColor: "#6A77EB",
         borderRadius: 1,
-    }
+    },
+
+    inputsContainer: {
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        gap: 16,
+        marginTop: 8,
+    },
+    formsTopic: {
+        fontSize: 16,
+        fontWeight: "500",
+        color: "#EB6AAF",
+        position: "relative",
+        right: 80,
+    },
+    formInput: {
+        width: "80%",
+        height: 50,
+        backgroundColor: "#EEE",
+        borderRadius: 25,
+        paddingLeft: 20,
+        color: "#1A1A1A",
+    },
+    formInput50: {
+        width: "47%",
+        height: 50,
+        backgroundColor: "#EEE",
+        borderRadius: 25,
+        paddingLeft: 20,
+        color: "#1A1A1A",
+    },
+    formInput50Container: {
+        width: "80%",
+        alignItems: "center",
+        justifyContent: "space-between",
+        flexDirection: "row",
+    },
 });

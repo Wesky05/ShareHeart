@@ -11,9 +11,18 @@ export function Login() {
               <LogoImage width={300}/>  
             </View>
             <View style={styles.formContainer}>
+                <Text style={styles.formTitle}>Entrar</Text>
                 <TextInput style={styles.formInput}
                     placeholder="CPF/CNPJ"
-                    placeholderTextColor="#6A77EB"
+                    placeholderTextColor="#9D9D9D"
+                    cursorColor="#EB6AAF"
+                    keyboardType="number-pad"
+                />
+                <TextInput style={styles.formInput}
+                    placeholder="Senha"
+                    placeholderTextColor="#9D9D9D"
+                    cursorColor="#EB6AAF"
+                    secureTextEntry
                 />
             </View>
             

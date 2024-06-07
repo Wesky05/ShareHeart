@@ -1,11 +1,11 @@
-import { Image, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import LogoImage from "../../assets/shareheart-logo.svg";
-import { Svg } from "react-native-svg";
 import { AppleLogo, GoogleLogo, MetaLogo, MicrosoftOutlookLogo } from "phosphor-react-native";
 
 
-export function Login() {
+
+export function Login({navigation}) {
     return(
         <View style={styles.container}>
             <View style={styles.logoContainer}>
@@ -50,7 +50,7 @@ export function Login() {
                 </View>
                 <View style={styles.singInContainer}>
                     <Text style={styles.text}>Não tem uma conta?</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
                         <Text style={styles.singIn}>Cadastre-se</Text>
                     </TouchableOpacity>
                 </View>

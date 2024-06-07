@@ -19,12 +19,16 @@ export function Login({navigation}) {
                         placeholderTextColor="#9D9D9D"
                         cursorColor="#EB6AAF"
                         keyboardType="number-pad"
+                        selectionColor="#EB6AAF"
+                        selectionHandleColor="#6A77EB"
                     />
                     <TextInput style={styles.formInput}
                         placeholder="Senha"
                         placeholderTextColor="#9D9D9D"
                         cursorColor="#EB6AAF"
                         secureTextEntry
+                        selectionColor="#EB6AAF"
+                        selectionHandleColor="#6A77EB"
                     />
                 </View>
                 <TouchableOpacity>

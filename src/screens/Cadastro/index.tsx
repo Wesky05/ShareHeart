@@ -86,9 +86,79 @@ export function Cadastro({navigation}) {
                                 selectionColor="#6A77EB"
                                 selectionHandleColor="#EB6AAF"
                             />
+                            <TextInput style={styles.formInput}
+                                placeholder="Confirmar senha"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="default"
+                                secureTextEntry
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                        </View>
+                        <View style={styles.signInBtnContainer}>
+                            <TouchableOpacity style={styles.signInBtn}>
+                                 <Text style={styles.signInBtnText}>Cadastrar</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </ScrollView>
+                ) : (
+                    <ScrollView>
+                        <View style={styles.inputsContainer}>
+                            <Text style={styles.formsTopic}>Informações Intitucionais</Text>
+                            <TextInput style={styles.formInput}
+                                placeholder="Nome da Instituição"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="default"
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                            <TextInput style={styles.formInput}
+                                placeholder="CNPJ"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="number-pad"
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                            <TextInput style={styles.formInput}
+                                placeholder="CEP"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="number-pad"
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                            <TextInput style={styles.formInput}
+                                placeholder="Endereço"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="default"
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
                             <View style={styles.formInput50Container}>
                                 <TextInput style={styles.formInput50}
-                                    placeholder="Data de Nasc."
+                                    placeholder="Número"
+                                    placeholderTextColor="#9D9D9D"
+                                    cursorColor="#6A77EB"
+                                    keyboardType="number-pad"
+                                    selectionColor="#6A77EB"
+                                    selectionHandleColor="#EB6AAF"
+                                ></TextInput>
+                                <TextInput style={styles.formInput50}
+                                    placeholder="Complemento"
+                                    placeholderTextColor="#9D9D9D"
+                                    cursorColor="#6A77EB"
+                                    keyboardType="default"
+                                    selectionColor="#6A77EB"
+                                    selectionHandleColor="#EB6AAF"
+                                ></TextInput>
+                            </View>
+                            <View style={styles.formInput50Container}>
+                                <TextInput style={styles.formInput50}
+                                    placeholder="Ramo atuação"
                                     placeholderTextColor="#9D9D9D"
                                     cursorColor="#6A77EB"
                                     keyboardType="numbers-and-punctuation"
@@ -105,14 +175,41 @@ export function Cadastro({navigation}) {
                                 ></TextInput>
                             </View>
                         </View>
+                        <View style={styles.inputsContainer}>
+                            <Text style={styles.formsTopic}>Informações da conta</Text>
+                            <TextInput style={styles.formInput}
+                                placeholder="Email da Instituição"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="email-address"
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                            <TextInput style={styles.formInput}
+                                placeholder="Criar senha"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="default"
+                                secureTextEntry
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                            <TextInput style={styles.formInput}
+                                placeholder="Confirmar senha"
+                                placeholderTextColor="#9D9D9D"
+                                cursorColor="#6A77EB"
+                                keyboardType="default"
+                                secureTextEntry
+                                selectionColor="#6A77EB"
+                                selectionHandleColor="#EB6AAF"
+                            />
+                        </View>
                         <View style={styles.signInBtnContainer}>
                             <TouchableOpacity style={styles.signInBtn}>
                                  <Text style={styles.signInBtnText}>Cadastrar</Text>
                             </TouchableOpacity>
                         </View>
                     </ScrollView>
-                ) : (
-                    <Text>Formulário de Instituição</Text>
                 )}
 
             </View>

@@ -35,7 +35,7 @@ export function Login({navigation}) {
                 <TouchableOpacity>
                     <Text style={styles.link}>Esqueceu a senha?</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.buttonText}>Entrar</Text>
                 </TouchableOpacity>
                 <Text style={styles.text}>Ou entrar com</Text>

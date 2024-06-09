@@ -9,16 +9,9 @@ export const styles = StyleSheet.create({
         alignItems: "center"
     },
 
-    logoContainer: {
-        width: "100%",
-        height: "20%",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-
     formContainer: {
         width: "100%",
-        height: "80%",
+        height: "95%",
         paddingVertical: 40,
         backgroundColor: "#FAFAFA",
         position: "absolute",
@@ -99,7 +92,7 @@ export const styles = StyleSheet.create({
         color: "#1A1A1A",
     },
     formInput50: {
-        width: "47%",
+        width: "50%",
         height: 50,
         backgroundColor: "#EEE",
         borderRadius: 25,
@@ -111,5 +104,26 @@ export const styles = StyleSheet.create({
         alignItems: "flex-start",
         justifyContent: "space-between",
         flexDirection: "row",
+        gap: 16,
+    },
+    signInBtnContainer: {
+        width: "100%",
+        height: "auto",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 40,
+    },
+    signInBtn: {
+        width: "50%",
+        height: 50,
+        backgroundColor: "#EB6AAF",
+        borderRadius: 15,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    signInBtnText: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: "#FAFAFA"
     },
 });

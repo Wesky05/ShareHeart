@@ -1,4 +1,4 @@
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Button, KeyboardAvoidingView, ScrollView, ScrollViewComponent, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import LogoImage from "../../assets/shareheart-logo-blue.svg";
 import { ArrowLeft } from "phosphor-react-native";
@@ -11,10 +11,7 @@ export function Cadastro({navigation}) {
 
     
     return(
-        <View style={styles.container}>
-            <View style={styles.logoContainer}>
-              <LogoImage width={200}/>  
-            </View>
+        <KeyboardAvoidingView behavior="height" style={styles.container}>
             <View style={styles.formContainer}>
                 <View style={styles.formContainerHeader}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -108,11 +105,17 @@ export function Cadastro({navigation}) {
                                 ></TextInput>
                             </View>
                         </View>
+                        <View style={styles.signInBtnContainer}>
+                            <TouchableOpacity style={styles.signInBtn}>
+                                 <Text style={styles.signInBtnText}>Cadastrar</Text>
+                            </TouchableOpacity>
+                        </View>
                     </ScrollView>
                 ) : (
                     <Text>Formulário de Instituição</Text>
                 )}
+
             </View>
-        </View>
+        </KeyboardAvoidingView>
     );
 }

@@ -1,6 +1,6 @@
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
-import { Gear, MagnifyingGlass } from "phosphor-react-native";
+import { Gear, Info, MagnifyingGlass } from "phosphor-react-native";
 
 
 
@@ -9,9 +9,9 @@ export function Home() {
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.header}>
                 <View style={styles.headerTop}>
-                    <View style={styles.profile}>
+                    <TouchableOpacity style={styles.profile}>
                         <Text style={styles.profileLetter}>U</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={styles.searchbarWrapper}>
                         <TextInput
                             placeholderTextColor="#9D9D9D"
@@ -36,6 +36,17 @@ export function Home() {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.headerBottom}>
+                    <View>
+                        <Text style={styles.textH1}>Olá, Usuário!</Text>
+                        <Text style={styles.textP}>Qual causa você irá ajudar hoje?</Text>
+                    </View>
+                    <TouchableOpacity style={styles.button}>
+                        <Info
+                            color="#444"
+                            size={30}
+                            weight="regular"
+                        />
+                    </TouchableOpacity>
                 </View>
             </View>
         </ScrollView>

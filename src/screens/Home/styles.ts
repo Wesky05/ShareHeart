@@ -87,4 +87,16 @@ export const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: "#EEE",
     },
+
+
+    textH1: {
+        fontSize: 24,
+        fontWeight: "600",
+        color: "#1A1A1A",
+    },
+    textP: {
+        fontSize: 16,
+        fontWeight: "400",
+        color: "#616161",
+    },
 });

@@ -44,7 +44,7 @@ export function TabRoutes() {
                 component={Login} 
                 options={{
                 tabBarButton: () => null,
-                
+                tabBarStyle: {display: "none"},
             }}/>
 
             <Screen 
@@ -52,6 +52,7 @@ export function TabRoutes() {
                 component={Cadastro} 
                 options={{
                 tabBarButton: () => null,
+                tabBarStyle: {display: "none"},
             }}/>
 
             <Screen 

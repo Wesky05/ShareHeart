@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import LogoImage from "../../assets/shareheart-logo.svg";
 import { AppleLogo, GoogleLogo, MetaLogo, MicrosoftOutlookLogo } from "phosphor-react-native";
@@ -8,7 +8,7 @@ import { AppleLogo, GoogleLogo, MetaLogo, MicrosoftOutlookLogo } from "phosphor-
 export function Login({navigation}) {
 
     return(
-        <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.logoContainer}>
               <LogoImage width={300}/>  
             </View>
@@ -61,6 +61,6 @@ export function Login({navigation}) {
                 </View>
             </View>
             
-        </View>
+        </ScrollView>
     );
 }

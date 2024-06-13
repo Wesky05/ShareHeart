@@ -1,10 +1,19 @@
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { Gear, Info, MagnifyingGlass } from "phosphor-react-native";
+import MapView from "react-native-maps";
+import { useState } from "react";
 
 
 
 export function Home() {
+    const initialLocation = {
+        latitude: -8.052564746833177, 
+        longitude: -34.88518525077827
+    }
+    
+    const [myLocation, setMyLocation] = useState(initialLocation)
+    
     return(
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.header}>
@@ -49,6 +58,20 @@ export function Home() {
                     </TouchableOpacity>
                 </View>
             </View>
+            <MapView
+                style={styles.map}
+                initialRegion={
+                    {
+                        latitude: myLocation.latitude,
+                        longitude: myLocation.longitude,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421
+                    }
+                }
+                provider="google"
+            >
+
+            </MapView>
         </ScrollView>
     );
 }

@@ -99,4 +99,10 @@ export const styles = StyleSheet.create({
         fontWeight: "400",
         color: "#616161",
     },
+
+    map: {
+        zIndex: -999,
+        width: "100%",
+        height: "100%"
+    }
 });

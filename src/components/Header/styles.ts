@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     header: {
-        position: "absolute",
+        position: "static",
         top: 0,
         left: 0,
         width: "100%",

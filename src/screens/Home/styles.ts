@@ -53,11 +53,6 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#EB6AAF",
     },
-    profileLetter: {
-        fontSize: 18,
-        fontWeight: "600",
-        color: "#FAFAFA",
-    },
 
     searchbarWrapper: {
         width: "58.14%",
@@ -104,5 +99,26 @@ export const styles = StyleSheet.create({
         zIndex: -999,
         width: "100%",
         height: "100%"
+    },
+    buttonContainer: {
+        position: 'absolute',
+        bottom: 100,
+        right: 30,
+        width: '100%',
+        alignItems: 'flex-end'
+    },
+    markerImage: {
+        width: 40,
+        height: 40,
+        borderRadius: 20
+    },
+
+    currentLocationBtn: {
+        width: 50,
+        height: 50,
+        backgroundColor: '#EB6AAF',
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 25
     }
 });

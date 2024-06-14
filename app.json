@@ -6,7 +6,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#6A77EB"
+      "backgroundColor": "#EB6AAF"
     },
     "packagerOpts": {
       "config": "metro.config.js",

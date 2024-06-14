@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 
 export const styles = StyleSheet.create({
@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         gap: 5,
         paddingBottom: 110,
+        position: "static",
     },
     postHeader: {
         width: "100%",
@@ -37,5 +38,5 @@ export const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "400",
         color: "#1A1A1A"
-    }
+    },
 });

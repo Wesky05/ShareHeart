@@ -26,7 +26,6 @@ export function Post() {
                     />
                 </TouchableOpacity>
             </View>
-            
         </View>
     );
 }

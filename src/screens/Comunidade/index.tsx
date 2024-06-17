@@ -6,7 +6,7 @@ import { Plus } from "phosphor-react-native";
 
 
 
-export function Comunidade() {
+export function Comunidade({navigation}) {
     return(
         <ScrollView contentContainerStyle={styles.container}>
             <Header
@@ -17,7 +17,7 @@ export function Comunidade() {
                 <Post/>
                 <Post/>
             </ScrollView>
-            <TouchableOpacity style={styles.addPostButton}>
+            <TouchableOpacity style={styles.addPostButton} onPress={() => navigation.navigate('Postar')}>
                 <Plus
                     color="#FAFAFA"
                     size={30}

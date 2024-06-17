@@ -1,6 +1,6 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
-import { DotsThree, DotsThreeCircle, HandHeart, Heart } from "phosphor-react-native";
+import { DotsThree, HandHeart, Heart } from "phosphor-react-native";
 import ProfileImage from "../../assets/profile-img.svg";
 
 export function Post() {

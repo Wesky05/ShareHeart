@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems: "center",
         gap: 5,
-        borderBottomColor: "#9D9D9D",
+        borderBottomColor: "#EEE",
         borderBottomWidth: 1,
     },
     postBottom: {

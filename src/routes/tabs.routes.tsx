@@ -7,6 +7,7 @@ import { Notificacoes } from "../screens/Notificacoes";
 import { Login } from "../screens/Login";
 import { Cadastro } from "../screens/Cadastro";
 import { Text, View } from "react-native";
+import { Postar } from "../screens/Postar";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -109,6 +110,14 @@ export function TabRoutes() {
                             </View>
                         )
                     }
+            }}/>
+
+            <Screen 
+                name="Postar" 
+                component={Postar} 
+                options={{
+                tabBarButton: () => null,
+                tabBarStyle: {display: "none"},
             }}/>
 
         </Navigator>

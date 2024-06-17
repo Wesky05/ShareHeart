@@ -4,12 +4,12 @@ import { Gear, Info, MagnifyingGlass } from "phosphor-react-native";
 import { styles } from "./styles";
 
 
-export function Header({cta}) {
+export function Header({navigation, cta}) {
     const user = "Neto"
     return(
         <View style={styles.header}>
                 <View style={styles.headerTop}>
-                    <TouchableOpacity style={styles.profile}>
+                    <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate("Perfil")}>
                         <ProfileImage width={40}/>
                     </TouchableOpacity>
                     <View style={styles.searchbarWrapper}>

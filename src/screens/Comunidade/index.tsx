@@ -10,6 +10,7 @@ export function Comunidade({navigation}) {
     return(
         <ScrollView contentContainerStyle={styles.container}>
             <Header
+            navigation={navigation}
                 cta="Explore sua comunidade!"
             />
             <ScrollView contentContainerStyle={styles.postsContainer}>

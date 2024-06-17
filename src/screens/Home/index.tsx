@@ -11,7 +11,7 @@ import { Header } from "../../components/Header";
 
 
 
-export function Home() {
+export function Home({navigation}) {
     const initialLocation = {
         latitude: -8.052564746833177, 
         longitude: -34.88518525077827,
@@ -67,6 +67,7 @@ export function Home() {
     return(
         <ScrollView contentContainerStyle={styles.container}>
             <Header
+                navigation={navigation}
                 cta="Qual causa você irá ajudar hoje?"            
             />
             <MapView

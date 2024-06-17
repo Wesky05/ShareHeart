@@ -8,4 +8,10 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FAFAFA",
         alignItems: "center"
     },
+    postsContainer: {
+        minWidth: "100%",
+        minHeight: "100%",
+        paddingBottom: 90,
+        paddingTop: 190,
+    }
 });

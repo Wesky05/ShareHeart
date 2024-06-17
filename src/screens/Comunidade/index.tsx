@@ -11,7 +11,11 @@ export function Comunidade() {
             <Header
                 cta="Explore sua comunidade!"
             />
-            <Post/>
+            <ScrollView contentContainerStyle={styles.postsContainer}>
+                <Post/>
+                <Post/>
+                <Post/>
+            </ScrollView>
         </ScrollView>
     );
 }

@@ -1,12 +1,10 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 
 export const styles = StyleSheet.create({
     container: {
         width: "100%",
         gap: 5,
-        paddingBottom: 110,
-        position: "static",
     },
     postHeader: {
         width: "100%",
@@ -39,4 +37,37 @@ export const styles = StyleSheet.create({
         fontWeight: "400",
         color: "#1A1A1A"
     },
+    postImageContainer: {
+        width: "100%",
+        height: "auto",
+    },
+    postImage: {
+        width: "100%",
+        maxHeight: 300,
+    },
+    postInteractions: {
+        width: "100%",
+        flexDirection: "row",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        alignItems: "center",
+        gap: 5,
+        borderBottomColor: "#9D9D9D",
+        borderBottomWidth: 1,
+    },
+    postBottom: {
+        width: "100%",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+    },
+    postProfileName: {
+        fontSize: 14,
+        fontWeight: "500",
+        color: "#1A1A1A"
+    },
+    postSubtitle: {
+        fontSize: 14,
+        fontWeight: "300",
+        color: "#1A1A1A"
+    }
 });

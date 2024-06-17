@@ -13,5 +13,16 @@ export const styles = StyleSheet.create({
         minHeight: "100%",
         paddingBottom: 90,
         paddingTop: 190,
+    },
+    addPostButton: {
+        width: 50,
+        height: 50,
+        backgroundColor: "#EB6AAF",
+        position: "absolute",
+        bottom: 100,
+        right: 10,
+        borderRadius: 25,
+        alignItems: "center",
+        justifyContent: "center"
     }
 });

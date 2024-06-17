@@ -1,7 +1,8 @@
-import { ScrollView, View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { Header } from "../../components/Header";
 import { Post } from "../../components/Post";
+import { Plus } from "phosphor-react-native";
 
 
 
@@ -16,6 +17,13 @@ export function Comunidade() {
                 <Post/>
                 <Post/>
             </ScrollView>
+            <TouchableOpacity style={styles.addPostButton}>
+                <Plus
+                    color="#FAFAFA"
+                    size={30}
+                    weight="regular"
+                />
+            </TouchableOpacity>
         </ScrollView>
     );
 }

@@ -23,5 +23,30 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 20,
         backgroundColor: "#EEE",
+    },
+
+    profileInfo: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+    },
+    profileImage: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    profileEditField: {
+        alignItems: "center",
+        gap: 16,
+    },
+    profileEditBtn: {
+        padding: 8,
+        backgroundColor: "#EEE",
+        borderRadius: 8,
+    },
+    profileEditBtnText: {
+        color: "#444",
+        fontSize: 16,
+        fontWeight: "500"
     }
 });

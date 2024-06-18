@@ -1,6 +1,6 @@
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
-import { ArrowLeft, Gear } from "phosphor-react-native";
+import { ArrowLeft, Gear, HeartBreak } from "phosphor-react-native";
 import ProfileImage from "../../assets/profile-img.svg";
 import { useState } from "react";
 
@@ -64,6 +64,30 @@ export function Perfil({navigation}) {
                         <Text style={[styles.accountType, selectedOption === 'likes' && styles.activeAccountType]}>Suas curtidas</Text>
                     </TouchableOpacity>
             </View>
+            {
+                selectedOption == 'posts' ? (
+                    <ScrollView contentContainerStyle={styles.profileInteractionsContainer}>
+                        <View style={styles.profileInteractions}>
+                            <HeartBreak size={48} weight="regular" color="#EB6AAF"/>
+                            <Text style={styles.profileInteractionsText}>Você ainda não fez publicações</Text>
+                        </View>
+                    </ScrollView>
+                ) : selectedOption == 'donations' ? (
+                    <ScrollView contentContainerStyle={styles.profileInteractionsContainer}>
+                        <View style={styles.profileInteractions}>
+                            <HeartBreak size={48} weight="regular" color="#EB6AAF"/>
+                            <Text style={styles.profileInteractionsText}>Você ainda não fez doações</Text>
+                        </View>
+                    </ScrollView>
+                ) : (
+                    <ScrollView contentContainerStyle={styles.profileInteractionsContainer}>
+                        <View style={styles.profileInteractions}>
+                            <HeartBreak size={48} weight="regular" color="#EB6AAF"/>
+                            <Text style={styles.profileInteractionsText}>Ainda não há nada por aqui</Text>
+                        </View>
+                    </ScrollView>
+                )
+            }
         </ScrollView>
     );
 }

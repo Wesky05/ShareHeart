@@ -108,4 +108,22 @@ export const styles = StyleSheet.create({
         borderBottomColor: "#6A77EB",
         borderRadius: 1,
     },
+
+    profileInteractionsContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        marginTop: 100,
+    },
+    profileInteractions: {
+        alignItems: "center",
+        gap: 24,
+    },
+    profileInteractionsText: {
+        fontSize: 32,
+        fontWeight: "500",
+        color: "#6A77EB",
+        textAlign: "center",
+        maxWidth: 280
+    }
 });

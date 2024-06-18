@@ -63,10 +63,10 @@ export const styles = StyleSheet.create({
     },
 
     profileNumbers: {
-        width: "80%",
+        width: "100%",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-evenly"
+        justifyContent: "center"
     },
     profileNumberText: {
         fontSize: 24,

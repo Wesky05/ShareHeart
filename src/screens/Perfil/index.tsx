@@ -27,15 +27,15 @@ export function Perfil({navigation}) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.profileNumbers}>
-                    <View style={{alignItems: "center"}}>
+                    <View style={{alignItems: "center", width: 100}}>
                         <Text style={styles.profileNumberText}>12</Text>
                         <Text style={styles.profileNumberInfo}>Doações</Text>
                     </View>
-                    <View style={{alignItems: "center"}}>
+                    <View style={{alignItems: "center", width: 100}}>
                         <Text style={styles.profileNumberText}>3</Text>
                         <Text style={styles.profileNumberInfo}>Seguindo</Text>
                     </View>
-                    <View style={{alignItems: "center"}}>
+                    <View style={{alignItems: "center", width: 100}}>
                         <Text style={styles.profileNumberText}>0</Text>
                         <Text style={styles.profileNumberInfo}>Seguidores</Text>
                     </View>

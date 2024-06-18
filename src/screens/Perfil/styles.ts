@@ -25,17 +25,18 @@ export const styles = StyleSheet.create({
         backgroundColor: "#EEE",
     },
 
-    profileInfo: {
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-    },
     profileImage: {
         justifyContent: "center",
         alignItems: "center",
     },
+    profileName: {
+        width: "100%",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 16,
+    },
     profileEditField: {
+        width: "100%",
         alignItems: "center",
         gap: 16,
     },
@@ -48,5 +49,33 @@ export const styles = StyleSheet.create({
         color: "#444",
         fontSize: 16,
         fontWeight: "500"
+    },
+
+    profileNameText: {
+        fontSize: 24,
+        fontWeight: "500",
+        color: "#1A1A1A",
+    },
+    profileType: {
+        fontSize: 16,
+        fontWeight: "400",
+        color: "#EB6AAF",
+    },
+
+    profileNumbers: {
+        width: "80%",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-evenly"
+    },
+    profileNumberText: {
+        fontSize: 24,
+        fontWeight: "500",
+        color: "#1A1A1A",
+    },
+    profileNumberInfo: {
+        fontSize: 16,
+        fontWeight: "400",
+        color: "#6A77EB",
     }
 });

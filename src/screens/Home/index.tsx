@@ -1,13 +1,14 @@
 import { Button, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { Crosshair, Gear, Info, MagnifyingGlass } from "phosphor-react-native";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Callout, Marker } from "react-native-maps";
 import React, { useEffect, useState } from "react";
 import * as Location from 'expo-location';
 import ProfileImage from "../../assets/profile-img.svg";
 import CustomMarker from "./CustomMarker";
 import PinMarker from "./PinMarker";
 import { Header } from "../../components/Header";
+import { markers } from "./Markers";
 
 
 
@@ -92,18 +93,16 @@ export function Home({navigation}) {
                         image={require('../../assets/profile-img.png')}
                     />
                 }
-                
-                { pin.latitude && pin.longitude &&
+
+                {markers.map((marker, index) => (
                     <PinMarker
-                    coordinate={{
-                        latitude: pin.latitude,
-                        longitude: pin.longitude
-                    }}
-                    title="Instituição"
-                    description="Descrição"
+                    key={index}
+                    coordinate={marker}
+                    name={marker.nome}
+                    description={marker.endereco}
                     image={require('../../assets/pin.png')}
                     />
-                }
+                ))}
                 
             </MapView>
             <View style={styles.buttonContainer}>

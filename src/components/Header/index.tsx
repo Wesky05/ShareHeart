@@ -2,10 +2,28 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import ProfileImage from "../../assets/profile-img.svg";
 import { Gear, Info, MagnifyingGlass } from "phosphor-react-native";
 import { styles } from "./styles";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getUserDetails } from '../../services/api';
+import { useEffect, useState } from "react";
 
 
 export function Header({navigation, cta}) {
-    const user = "Neto"
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const fetchUser = async () => {
+        try {
+            const userDetails = await getUserDetails();
+            setUser(userDetails);
+        } catch (error) {
+            console.error('Erro ao buscar detalhes do usuário:', error);
+        }
+    };
+
+    fetchUser();
+    }, []);
+    
     return(
         <View style={styles.header}>
                 <View style={styles.headerTop}>
@@ -37,7 +55,7 @@ export function Header({navigation, cta}) {
                 </View>
                 <View style={styles.headerBottom}>
                     <View>
-                        <Text style={styles.textH1}>{"Olá, " + user + "!"}</Text>
+                        <Text style={styles.textH1}>{"Olá, " + (user ? user.name : "Carregando...") + "!"}</Text>
                         <Text style={styles.textP}>{cta}</Text>
                     </View>
                     <TouchableOpacity style={styles.button}>

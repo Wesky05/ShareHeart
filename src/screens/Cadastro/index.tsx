@@ -3,12 +3,39 @@ import { styles } from "./styles";
 import LogoImage from "../../assets/shareheart-logo-blue.svg";
 import { ArrowLeft } from "phosphor-react-native";
 import { useState } from "react";
-
+import axios from "axios";
 
 
 export function Cadastro({navigation}) {
     const [selectedProfile, setSelectedProfile] = useState('donor');
 
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [birthDate, setBirthDate] = useState('');
+
+    const apiUrl = process.env.EXPO_PUBLIC_API_URL;
+  
+    const registerDonor = () => {
+        axios.post(`${apiUrl}/donor/add`, {
+          name,
+          email,
+          password,
+          phoneNumber,
+          cpf,
+          birthDate,
+        })
+        .then(response => {
+          console.log(response.data);
+          alert('Usuário registrado com sucesso!');
+        })
+        .catch(error => {
+          console.error(error);
+          alert('Erro ao registrar usuário');
+        });
+      };
     
     return(
         <KeyboardAvoidingView behavior="height" style={styles.container}>
@@ -39,6 +66,8 @@ export function Cadastro({navigation}) {
                                 keyboardType="default"
                                 selectionColor="#6A77EB"
                                 selectionHandleColor="#EB6AAF"
+                                value={name}
+                                onChangeText={setName}
                             />
                             <TextInput style={styles.formInput}
                                 placeholder="CPF"
@@ -47,6 +76,8 @@ export function Cadastro({navigation}) {
                                 keyboardType="number-pad"
                                 selectionColor="#6A77EB"
                                 selectionHandleColor="#EB6AAF"
+                                value={cpf}
+                                onChangeText={setCpf}
                             />
                             <View style={styles.formInput50Container}>
                                 <TextInput style={styles.formInput50}
@@ -56,6 +87,8 @@ export function Cadastro({navigation}) {
                                     keyboardType="numbers-and-punctuation"
                                     selectionColor="#6A77EB"
                                     selectionHandleColor="#EB6AAF"
+                                    value={birthDate}
+                                    onChangeText={setBirthDate}
                                 ></TextInput>
                                 <TextInput style={styles.formInput50}
                                     placeholder="Telefone"
@@ -64,6 +97,8 @@ export function Cadastro({navigation}) {
                                     keyboardType="numeric"
                                     selectionColor="#6A77EB"
                                     selectionHandleColor="#EB6AAF"
+                                    value={phoneNumber}
+                                    onChangeText={setPhoneNumber}
                                 ></TextInput>
                             </View>
                         </View>
@@ -76,6 +111,8 @@ export function Cadastro({navigation}) {
                                 keyboardType="email-address"
                                 selectionColor="#6A77EB"
                                 selectionHandleColor="#EB6AAF"
+                                value={email}
+                                onChangeText={setEmail}
                             />
                             <TextInput style={styles.formInput}
                                 placeholder="Criar senha"
@@ -85,19 +122,12 @@ export function Cadastro({navigation}) {
                                 secureTextEntry
                                 selectionColor="#6A77EB"
                                 selectionHandleColor="#EB6AAF"
-                            />
-                            <TextInput style={styles.formInput}
-                                placeholder="Confirmar senha"
-                                placeholderTextColor="#9D9D9D"
-                                cursorColor="#6A77EB"
-                                keyboardType="default"
-                                secureTextEntry
-                                selectionColor="#6A77EB"
-                                selectionHandleColor="#EB6AAF"
+                                value={password}
+                                onChangeText={setPassword}
                             />
                         </View>
                         <View style={styles.signInBtnContainer}>
-                            <TouchableOpacity style={styles.signInBtn}>
+                            <TouchableOpacity style={styles.signInBtn} onPress={registerDonor}>
                                  <Text style={styles.signInBtnText}>Cadastrar</Text>
                             </TouchableOpacity>
                         </View>

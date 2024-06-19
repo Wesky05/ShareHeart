@@ -2,12 +2,28 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 import { ArrowLeft, Gear, HeartBreak } from "phosphor-react-native";
 import ProfileImage from "../../assets/profile-img.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getUserDetails } from "../../services/api";
 
 
 
 export function Perfil({navigation}) {
     const [selectedOption, setselectedOption] = useState('posts');
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const fetchUser = async () => {
+        try {
+            const userDetails = await getUserDetails();
+            setUser(userDetails);
+        } catch (error) {
+            console.error('Erro ao buscar detalhes do usuário:', error);
+        }
+    };
+
+    fetchUser();
+    }, []);
 
     return(
         <ScrollView style={styles.container}>
@@ -45,7 +61,7 @@ export function Perfil({navigation}) {
                 </View>
                 <View style={styles.profileName}>
                     <View>
-                        <Text style={styles.profileNameText}>Neto</Text>
+                        <Text style={styles.profileNameText}>{(user ? user.name : "Carregando...")}</Text>
                         <Text style={styles.profileType}>Doador</Text>
                     </View>
                     <TouchableOpacity style={styles.profileEditBtn}>

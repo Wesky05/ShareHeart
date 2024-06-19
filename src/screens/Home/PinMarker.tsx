@@ -2,11 +2,11 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import MapView, { Callout, Marker } from 'react-native-maps';
 
-export default function PinMarker({ coordinate, title, image, description }) {
+export default function PinMarker({ coordinate, image, name, description }) {
   return (
-    <Marker coordinate={coordinate} title={title} description={description}>
-          <Image source={image} style={styles.markerImage} />
-      </Marker>
+    <Marker coordinate={coordinate} title={name} description={description}>
+      <Image source={image} style={styles.markerImage} />
+    </Marker>
   )
 }
 

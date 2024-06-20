@@ -78,3 +78,15 @@ Inicie o Expo
   npx expo start
 ```
 
+
+## 🩷 Equipe
+
+Integrantes do projeto ShareHeart:
+
+- Everton Barbosa
+- Guilherme Willam
+- José Neto
+- Kevinny Weslley
+- Maria Heloysa
+- Sophia Alencar
+

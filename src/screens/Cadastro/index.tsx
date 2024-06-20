@@ -35,7 +35,7 @@ export function Cadastro({navigation}) {
           console.error(error);
           alert('Erro ao registrar usuário');
         });
-      };
+    };
     
     return(
         <KeyboardAvoidingView behavior="height" style={styles.container}>

@@ -4,25 +4,13 @@ import { Gear, Info, MagnifyingGlass } from "phosphor-react-native";
 import { styles } from "./styles";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getUserDetails } from '../../services/api';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../context/UserContext";
 
 
 export function Header({navigation, cta}) {
 
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        const fetchUser = async () => {
-        try {
-            const userDetails = await getUserDetails();
-            setUser(userDetails);
-        } catch (error) {
-            console.error('Erro ao buscar detalhes do usuário:', error);
-        }
-    };
-
-    fetchUser();
-    }, []);
+    const { user } = useContext(UserContext);
     
     return(
         <View style={styles.header}>

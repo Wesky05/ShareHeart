@@ -1,37 +1,28 @@
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Text, TextInput, TouchableOpacity, View, Platform } from "react-native";
 import { styles } from "./styles";
 import { ArrowLeft, Check, Gear, PencilSimple } from "phosphor-react-native";
-import { useEffect, useState } from "react";
-import { getUserDetails, updateUserName } from "../../services/api";
+import { useContext, useEffect, useState } from "react";
+import { getUserDetails, updateUserName,  } from "../../services/api";
+import { UserContext } from "../../context/UserContext";
 
 export function EditarPerfil({navigation}) {
 
-    const [user, setUser] = useState(null);
-    const [userName, setUserName] = useState("");
-
-    useEffect(() => {
-        const fetchUser = async () => {
-        try {
-            const userDetails = await getUserDetails();
-            setUser(userDetails);
-            setUserName(userDetails.name);
-        } catch (error) {
-            console.error('Erro ao buscar detalhes do usuário:', error);
-        }
-    };
-
-    fetchUser();
-    }, []);
+    const { user, updateUser} = useContext(UserContext);
+    const [newUserName, setNewUserName] = useState(user ? user.name : '');
 
     const handleUpdateUserName = async () => {
-        if (user && userName) {
-            try {
-                await updateUserName(user._id, userName);
-                // Navegar de volta para o perfil após a atualização
-                navigation.navigate("Perfil");
-            } catch (error) {
-                console.error('Erro ao atualizar o nome do usuário:', error);
-            }
+        if (!user) {
+            console.error('User não encontrado');
+            return;
+        }
+
+        try {
+            const response = await updateUserName(user._id, newUserName);
+            console.log('Nome do usuário atualizado com sucesso:', response);
+            updateUser({ ...user, name: newUserName }); // Atualizar o contexto do usuário
+            navigation.navigate('Perfil');
+        } catch (error) {
+            console.error('Erro ao atualizar o nome do usuário:', error.response ? error.response.data : error.message);
         }
     };
     
@@ -48,7 +39,7 @@ export function EditarPerfil({navigation}) {
             <View style={{alignItems: "center", gap: 32, justifyContent: "center", width: "100%", height: "100%", marginTop: -60}}>
                 <View style={{alignItems: "center", gap: 16, justifyContent: "center"}}>
                     <View style={styles.profileEditField}>
-                        <Image style={{width: 100, height: 100, borderRadius: 50}} source={require("../../assets/profile-img.png")}/>
+                        <Image style={{ width: 100, height: 100, borderRadius: 50 }} source={require('../../assets/profile-img.png')} />
                     </View>
                     <TouchableOpacity style={styles.editBtn}>
                         <Text style={styles.editText}>Editar foto</Text>
@@ -68,8 +59,8 @@ export function EditarPerfil({navigation}) {
                         keyboardType="default"
                         selectionColor="#6A77EB"
                         selectionHandleColor="#EB6AAF"
-                        value={userName}
-                        onChangeText={setUserName}
+                        value={newUserName}
+                        onChangeText={setNewUserName}
                     />
                 </View>
             </View>

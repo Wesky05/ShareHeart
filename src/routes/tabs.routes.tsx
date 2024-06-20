@@ -10,6 +10,7 @@ import { Text, View } from "react-native";
 import { Postar } from "../screens/Postar";
 import { Perfil } from "../screens/Perfil";
 import { EditarPerfil } from "../screens/EditarPerfil";
+import { Config } from "../screens/Config";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -133,6 +134,14 @@ export function TabRoutes() {
             <Screen 
                 name="EditarPerfil" 
                 component={EditarPerfil} 
+                options={{
+                tabBarButton: () => null,
+                tabBarStyle: {display: "none"},
+            }}/>
+
+            <Screen 
+                name="Config" 
+                component={Config} 
                 options={{
                 tabBarButton: () => null,
                 tabBarStyle: {display: "none"},

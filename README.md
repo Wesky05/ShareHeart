@@ -43,6 +43,13 @@ Para esse projeto, utilizamos:
 **Back-end:** Node, Express, Mongoose
 
 
+## 🔐 Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar a seguinte variável de ambiente no seu .env
+
+`EXPO_PUBLIC_API_URL` = http://{IP da sua máquina local}:3000
+
+
 ## 🖥️ Rodando localmente
 
 > Certfique-se de já estar rodando o [Backend](https://github.com/netoodev/ShareHeart-Back) do projeto

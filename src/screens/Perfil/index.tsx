@@ -60,11 +60,11 @@ export function Perfil({navigation}) {
                     </View>
                 </View>
                 <View style={styles.profileName}>
-                    <View>
+                    <View style={{alignItems: "center"}}>
                         <Text style={styles.profileNameText}>{(user ? user.name : "Carregando...")}</Text>
                         <Text style={styles.profileType}>Doador</Text>
                     </View>
-                    <TouchableOpacity style={styles.profileEditBtn}>
+                    <TouchableOpacity style={styles.profileEditBtn} onPress={() => navigation.navigate("EditarPerfil")}>
                         <Text style={styles.profileEditBtnText}>Editar perfil</Text>
                     </TouchableOpacity>
                 </View>

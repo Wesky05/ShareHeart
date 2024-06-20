@@ -9,6 +9,7 @@ import { Cadastro } from "../screens/Cadastro";
 import { Text, View } from "react-native";
 import { Postar } from "../screens/Postar";
 import { Perfil } from "../screens/Perfil";
+import { EditarPerfil } from "../screens/EditarPerfil";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -124,6 +125,14 @@ export function TabRoutes() {
             <Screen 
                 name="Perfil" 
                 component={Perfil} 
+                options={{
+                tabBarButton: () => null,
+                tabBarStyle: {display: "none"},
+            }}/>
+
+            <Screen 
+                name="EditarPerfil" 
+                component={EditarPerfil} 
                 options={{
                 tabBarButton: () => null,
                 tabBarStyle: {display: "none"},

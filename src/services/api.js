@@ -21,3 +21,29 @@ export const getUserDetails = async () => {
     throw error;
   }
 };
+
+export const updateUserName = async (userId, newUserName) => {
+  const token = await AsyncStorage.getItem('token');
+  if (!token) {
+    throw new Error('Token não encontrado');
+  }
+
+  try {
+    console.log('Enviando solicitação para:', `${API_URL}/donor/update/${userId}`);
+    console.log('Novo nome:', newUserName);
+    console.log('Token:', token);
+    console.log('User ID:', userId); // Verificação do ID do usuário
+
+    const response = await axios.put(`${API_URL}/donor/update/${userId}`, { name: newUserName }, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    console.log('Resposta da API:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao atualizar o nome do usuário:', error.response ? error.response.data : error.message);
+    throw error;
+  }
+};

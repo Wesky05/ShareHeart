@@ -39,11 +39,11 @@ export const styles = StyleSheet.create({
     },
     postImageContainer: {
         width: "100%",
-        height: "auto",
+        maxHeight: 300,
     },
     postImage: {
         width: "100%",
-        maxHeight: 300,
+        height: "100%"
     },
     postInteractions: {
         width: "100%",

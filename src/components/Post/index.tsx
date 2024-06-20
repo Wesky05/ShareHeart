@@ -3,19 +3,19 @@ import { styles } from "./styles";
 import { DotsThree, HandHeart, Heart } from "phosphor-react-native";
 import ProfileImage from "../../assets/profile-img.svg";
 
-export function Post() {
+export function Post({profileName, profilePic, postLocation, postImageUrl, subtitle}) {
     return(
         <View style={styles.container}>
             <View style={styles.postHeader}>
                 <View style={styles.postProfile}>
                     <TouchableOpacity style={styles.profile}>
-                        <ProfileImage width={40}/>
+                        <Image style={{width: 40, height: 40, borderRadius: 20}} source={profilePic ? { uri: profilePic } : require("../../assets/profile-img.png")}/>
                     </TouchableOpacity>
                     <View>
                         <TouchableOpacity>
-                            <Text style={styles.profileName}>Nome do perfil</Text>
+                            <Text style={styles.profileName}>{profileName ? profileName : "Nome do perfil"}</Text>
                         </TouchableOpacity>
-                            <Text style={styles.postLocation}>Cidade - UF</Text>
+                            <Text style={styles.postLocation}>{postLocation}</Text>
                     </View>
                 </View>
                 <TouchableOpacity>
@@ -27,7 +27,7 @@ export function Post() {
                 </TouchableOpacity>
             </View>
             <View style={styles.postImageContainer}>
-                <Image style={styles.postImage} source={require("../../assets/photo-placeholder.png")}/>
+                <Image style={styles.postImage} source={postImageUrl ? { uri: postImageUrl } : require("../../assets/photo-placeholder.png")}/>
             </View>
             <View style={styles.postInteractions}>
                 <TouchableOpacity>
@@ -47,9 +47,9 @@ export function Post() {
             </View>
             <View style={styles.postBottom}>
                 <TouchableOpacity>
-                    <Text style={styles.postProfileName}>Nome do perfil</Text>
+                    <Text style={styles.postProfileName}>{profileName ? profileName : "Nome do perfil"}</Text>
                 </TouchableOpacity>
-                <Text style={styles.postSubtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis eleifend lobortis. Phasellus congue, elit eu rhoncus vehicula, mauris nisl vestibulum odio, in iaculis tellus nulla quis erat. Vivamus faucibus urna condimentum, fermentum libero a, rutrum neque. Phasellus bibendum iaculis egestas.</Text>
+                <Text style={styles.postSubtitle}>{subtitle}</Text>
             </View>
         </View>
     );

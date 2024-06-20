@@ -47,3 +47,18 @@ export const updateUserName = async (userId, newUserName) => {
     throw error;
   }
 };
+
+export const deleteUserAccount = async (userId) => {
+  try {
+      const token = await AsyncStorage.getItem('token');
+      const response = await axios.delete(`${API_URL}/donor/delete/${userId}`, {
+          headers: {
+              Authorization: `Bearer ${token}`
+          }
+      });
+      return response.data;
+  } catch (error) {
+      console.error('Erro ao excluir conta do usuário:', error.response ? error.response.data : error.message);
+      throw error;
+  }
+};
